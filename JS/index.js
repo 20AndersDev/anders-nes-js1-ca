@@ -1,23 +1,20 @@
 const url = "https://dog.ceo/api/breeds/list/all";
 
-const resultsContainer = document.querySelector(".results");
-
 async function getDogs() {
-
     const response = await fetch(url);
-    const results = await response.json();
-    const facts = results.all;
+    const data = await response.json();
+    const breeds = Object.keys(data.message);
 
-    for (let i = 0; i < facts.length; i++) {
-        console.log(facts[i].text);
-        resultsContainer.innerHTML += `<div class="result">${facts[i].text}</div>`;
-    
-    
+    const list = document.querySelector("#breed-list");
+
+    for (let i = 0; i < breeds.length; i++) {
+        const li = document.createElement("li");
+        const link = document.createElement("a");
+        link.textContent = breeds[i];
+        link.href = `/html/details.html?breed=${breeds[i]}`;
+        li.appendChild(link);
+        list.appendChild(li);
     }
-
-
-
 }
-
 
 getDogs();
