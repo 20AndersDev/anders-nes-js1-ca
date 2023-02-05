@@ -9,7 +9,7 @@ async function getList() {
     const getData = await response.json();
     const data = Object.keys(getData.data.creatures.food)
     
-    const list = document.querySelector("#breed-list");
+    const list = document.querySelector("#item-list");
 
     for(let i = 0; i < data.length; i++){
         if(i === 10){
@@ -18,17 +18,18 @@ async function getList() {
         const li = document.createElement("li");
         const link = document.createElement("a");
         link.textContent = getData.data.creatures.food[data[i]].name;
-        link.href = `/html/details.html?breed=${data[i]}`;
+        link.href = `/html/details.html?name=${getData.data.creatures.food[data[i]].name}`;
         li.appendChild(link);
         list.appendChild(li);
-        console.log(getData.data.creatures.food[i]);
+      }
+       
 
     }
 
-  } catch (error) {
+    catch (error) {
     const errorMessage = document.querySelector("#error-message");
     errorMessage.textContent = `An error occurred: ${error.message}`;
   }
-}
+};
 
 getList();
