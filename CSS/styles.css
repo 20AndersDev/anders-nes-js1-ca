@@ -17,6 +17,9 @@ nav{
 
 #Home,#Contact{
     padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+
 }
 
 .contact-container{
@@ -67,14 +70,18 @@ input{
 
 #item-list{
     display: flex;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;   
-   list-style-type: none;
-   border-color: black;
+    list-style-type: none;
+    border-color: black;
+    justify-content: center;
 }
 
 li{
     border: 1px solid black;
     padding: 20px;
     border-radius: 20px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
 }
