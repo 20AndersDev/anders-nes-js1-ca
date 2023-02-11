@@ -15,6 +15,10 @@ nav{
     background-color: rgb(54, 50, 50);
 }
 
+#Home,#Contact{
+    padding: 20px;
+}
+
 .contact-container{
     display: flex;
     justify-content: center;
@@ -44,5 +48,27 @@ input{
 #submit-button{
     width: 300px;
     padding: 10px;
+    border-radius: 20px;
+}
+
+.item-container{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+
+#item-list{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;   
+   list-style-type: none;
+   border-color: black;
+}
+
+li{
+    border: 1px solid black;
+    padding: 20px;
     border-radius: 20px;
 }
