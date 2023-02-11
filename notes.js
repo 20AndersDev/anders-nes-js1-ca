@@ -35,26 +35,4 @@ getDogs();
 
 
 
-  /* const urlParams2 = new URL(window.location.href);
-  const breed2 = urlParams2.searchParams.get("breed");
-  
-  const breedName = document.querySelector("#breed-name");
-  const breedImage = document.querySelector("#breed-image");
-  
-  async function getBreedDetails() {
-    try {
-      const response = await fetch(`https://dog.ceo/api/breed/${breed}/images/random`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      breedName.textContent = breed;
-      const image = document.createElement("img");
-      image.src = data.message;
-      breedImage.appendChild(image);
-    } catch (error) {
-      breedName.textContent = `An error occurred: ${error.message}`;
-    }
-  }
-  
-  getBreedDetails(); */
+  /*  */
