@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Contact Us</title>
 </head>
+<header>
+  <nav>
+    <button id="Home" href="index.html"> Home</button>
+    <button id="Contact" href="html/contact.html"> Contact</button>
+  </nav>
+</header>
 <body>
-    <div class="contact-div"> 
-        <div class="contact-container">
-          <div class="contact-div-input">
-            <label for="email"></label>
-            <input class="contact" type="text" placeholder="Email" name="email" id="email">
-          </div>
-          <div class="contact-div-input">
-            <label for="name"></label>
-            <input class="contact" type="text" placeholder="Full Name" name="Full Name" id="name">
-          </div>
-          <div class="contact-div-input">
-            <label for="message"></label>
-            <input class="contact-message" type="text" placeholder="Type your message here..." name="message" id="message">
-          </div>
-          <div class="su-but">
-            <button type="submit" class="signup-button"> Submit </button>
-          </div>
-        </div>        
-      </div>
+  <div class="contact-container">
+      <form>
+        <div class="div-contact-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="div-contact-form">
+          <label for="subject">Subject:</label>
+          <input type="text" id="subject" name="subject" required minlength="10"/>
+        </div>
+        <div class="div-contact-form">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="div-contact-form">
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required minlength="25"/>
+        </div>
+        <div class="div-submit">
+            <button id="submit-button" type="submit">Submit</button>
+        </div>
+      </form>     
+  </div>
+
+      <script src="/JS/nav.js"></script>
 </body>
 </html>

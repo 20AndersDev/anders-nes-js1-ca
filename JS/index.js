@@ -1,20 +1,14 @@
 const url = "https://botw-compendium.herokuapp.com/api/v2/all"; 
 
 async function getList() {  
-  try {                         
+  try {                       
     const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
     const getData = await response.json(); 
     const list = document.querySelector("#item-list");
     const data = Object.keys(getData.data.creatures.food)
     
 
     for(let i = 0; i < data.length; i++){
-        if(i === 10){
-            break;
-        };
         const li = document.createElement("li");
         const link = document.createElement("a");
         link.textContent = getData.data.creatures.food[data[i]].name;
@@ -23,6 +17,7 @@ async function getList() {
         list.appendChild(li);
         
       }
+      document.querySelector("#loader").style.display = "none"
     }
 
     catch (error) {
@@ -30,5 +25,7 @@ async function getList() {
     errorMessage.textContent = `An error occurred`;
   }
 };
+
+
 
 getList();
