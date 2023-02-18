@@ -77,11 +77,18 @@ input{
     justify-content: center;
 }
 
-li{
+#homeLi{
     border: 1px solid black;
     padding: 20px;
     border-radius: 20px;
     width: 200px;
     display: flex;
     justify-content: center;
+}
+
+
+
+.error{
+    color: red;
+    display: none;
 }

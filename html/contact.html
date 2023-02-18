@@ -15,29 +15,35 @@
 </header>
 <body>
   <div class="contact-container">
-      <form>
+      <form id="formContact">
         <div class="div-contact-form">
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" />
+          <div class="error" id="name-error"> Please type your name</div>
         </div>
         <div class="div-contact-form">
           <label for="subject">Subject:</label>
-          <input type="text" id="subject" name="subject" required minlength="10"/>
+          <input type="text" id="subject" name="subject" />
+          <div class="error" id="subject-error"> Subject must be minimum 10 characters</div>
         </div>
         <div class="div-contact-form">
           <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" />
+          <div class="error" id="email-error"> Please enter your email in correct format</div>
         </div>
         <div class="div-contact-form">
           <label for="address">Address:</label>
-          <input type="text" id="address" name="address" required minlength="25"/>
+          <input type="text" id="address" name="address" />
+          <div  class="error" id="adress-error"> Address must have minimum 25 characters</div>
         </div>
         <div class="div-submit">
             <button id="submit-button" type="submit">Submit</button>
         </div>
-      </form>     
-  </div>
+      </form>  
+      
+    </div>
 
       <script src="/JS/nav.js"></script>
+      <script src="/JS/contact.js"></script>
 </body>
 </html>

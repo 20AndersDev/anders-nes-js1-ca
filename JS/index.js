@@ -11,6 +11,7 @@ async function getList() {
     for(let i = 0; i < data.length; i++){
         const li = document.createElement("li");
         const link = document.createElement("a");
+        li.id = "homeLi"
         link.textContent = getData.data.creatures.food[data[i]].name;
         link.href = `/html/details.html?name=${getData.data.creatures.food[data[i]].name}`;
         li.appendChild(link);
