@@ -95,6 +95,14 @@ input{
 
 #form-success{
     display: none;
+    justify-content: center;
+    margin-top: 100px;
+    font-size: 100px;
+    color: green;
+}
+.div-form-success{
+    display: flex;
+    justify-content: center;
 }
 
 .error{
