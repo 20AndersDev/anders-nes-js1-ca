@@ -7,11 +7,15 @@ const email = document.querySelector("#email");
 const emailError = document.querySelector("#email-error");
 const address = document.querySelector("#address");
 const addressError = document.querySelector("#adress-error");
+const formSuccess = document.querySelector("#form-success")
 
-function formVal(input){
-    input.preventDefault();
+function formVal(event){
+    event.preventDefault();
+
+    const inputErrors = [];
 
     if (yourName.value.length === 0){
+        inputErrors.push("1");
         nameError.style.display = "block";
         yourName.style.borderColor = "red";
     } else {
@@ -20,6 +24,7 @@ function formVal(input){
     }
 
     if (subject.value.length < 10){
+        inputErrors.push("2");
         subjectError.style.display = "block";
         subject.style.borderColor = "red";
     } else {
@@ -28,6 +33,7 @@ function formVal(input){
     }
 
     if(validEmail(email.value) === false){
+        inputErrors.push("3");
         emailError.style.display = "block";
         email.style.borderColor = "red";
     } else {
@@ -36,12 +42,20 @@ function formVal(input){
     };
 
     if (address.value.length < 25){
+        inputErrors.push("4");
         addressError.style.display = "block";
         address.style.borderColor = "red";
     } else {
         addressError.style.display = "none";
         address.style.borderColor = "black";
     };
+
+    if(inputErrors.length === 0){
+    form.submit();
+    formSuccess.style.display = "block";
+    localStorage.setItem("formSubmitted", "true");
+  }
+
 
 }
 
@@ -55,3 +69,9 @@ function validEmail(checkemail) {
 form.addEventListener("submit", formVal);
 
 
+const formSubmitted = localStorage.getItem("formSubmitted");
+if (formSubmitted === "true") {
+    formSuccess.style.display = "block";
+    // clear the flag from local storage so the message doesn't persist indefinitely
+    localStorage.removeItem("formSubmitted");
+}

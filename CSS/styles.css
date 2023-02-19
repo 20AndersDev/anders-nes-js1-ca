@@ -86,7 +86,16 @@ input{
     justify-content: center;
 }
 
+#loader{
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
 
+#form-success{
+    display: none;
+}
 
 .error{
     color: red;
