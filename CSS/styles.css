@@ -109,3 +109,25 @@ input{
     color: red;
     display: none;
 }
+
+#details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+#item-name{
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 50px;
+}
+#item-properties{
+    display: block;
+    width: 100%;
+    gap: 10px;
+    font-size: 30px;
+    list-style-type: none;
+}
