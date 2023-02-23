@@ -21,6 +21,7 @@ async function getList() {
     }
 
     catch (error) {
+    document.querySelector("#loader").style.display = "none"
     const errorMessage = document.querySelector("#error-message");
     errorMessage.textContent = `An error occurred`;
   }

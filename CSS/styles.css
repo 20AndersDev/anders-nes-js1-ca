@@ -131,3 +131,10 @@ input{
     font-size: 30px;
     list-style-type: none;
 }
+
+
+#error-message{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}

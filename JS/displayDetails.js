@@ -21,7 +21,13 @@ async function displayDetails() {
 
     });
 
-    itemImage.src = `https://botw-compendium.herokuapp.com/api/v2/entry/${itemName}/image`;
+    try {
+      itemImage.src = `https://botw-compendium.herokuapp.com/api/v2/entry/${itemName}/image`;
+      await itemImage.decode();
+    } catch (error) {
+      throw new Error("Could not fetch image");
+    }
+
     document.querySelector("#loader").style.display = "none"
   } catch (error) {
     document.querySelector("#loader").style.display = "none"
