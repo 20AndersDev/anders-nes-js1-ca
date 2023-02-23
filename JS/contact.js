@@ -72,6 +72,5 @@ form.addEventListener("submit", formVal);
 const formSubmitted = localStorage.getItem("formSubmitted");
 if (formSubmitted === "true") {
     formSuccess.style.display = "block";
-    // clear the flag from local storage so the message doesn't persist indefinitely
     localStorage.removeItem("formSubmitted");
 }

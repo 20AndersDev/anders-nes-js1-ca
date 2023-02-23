@@ -19,8 +19,6 @@ async function displayDetails() {
       li.textContent = `${property}: ${itemData.data[property]}`;
       itemProperties.appendChild(li);
 
-      
-
     });
 
     itemImage.src = `https://botw-compendium.herokuapp.com/api/v2/entry/${itemName}/image`;

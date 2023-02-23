@@ -16,7 +16,6 @@ async function getList() {
         link.href = `/html/details.html?name=${getData.data.creatures.food[data[i]].name}`;
         li.appendChild(link);
         list.appendChild(li);
-        
       }
       document.querySelector("#loader").style.display = "none"
     }
